@@ -1,1 +1,52 @@
+:root {
+    /* --- Mode Clair --- */
+    
+    /* Couleur du texte */
+    --color-text: #232d4b;
+    
+    /* Couleur du texte inversé */
+    --color-text-inverse: #ffffff;
+    
+    /* Couleur de fond */
+    --color-bg: #f4f6f8;
+    
+    /* Couleuur de fond pour les zones secondaires */
+    --color-bg-alt: #e3e7eb;
+    
+    /* Couleur d'action principale (boutons, liens importants) */
+    --color-primary: #d64541;
+    
+    /* Coleur des éléments secondaires ou de support */
+    --color-secondary: #028075;
+    
+    /* Couleur pour l'accentuation */
+    --color-accent: #026b61;
+}
 
+@media (prefers-color-scheme: dark) {
+    :root {
+        /* --- Mode Sombre --- */
+
+        /* Couleur du texte */
+        --color-text: #f0f2f5;
+        
+        /* Couleur du texte inversé */
+        --color-text-inverse: #232d4b;
+        
+        /* Couleur de fond */
+        --color-bg: #232d4b;
+        
+        /* Couleuur de fond pour les zones secondaires */
+        --color-bg-alt: #2e3a5e;
+        
+        /* Couleur d'action principale (boutons, liens importants) */
+        --color-primary: #d64541;
+        
+        /* Coleur des éléments secondaires ou de support */
+        --color-secondary: #2ba89c;
+        
+        /* Couleur pour l'accentuation */
+        --color-accent: #e06c68;
+    }
+
+}
