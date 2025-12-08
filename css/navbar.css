@@ -1,0 +1,43 @@
+nav ul{
+    font-size: large;
+    margin: 0;
+    padding: 0;
+
+    display: flex;                          /* Met la liste horizontalement */
+    list-style: none;                       /* Supprime les puces devant les elts des listes */
+    background-color: var(--color-bg-alt)
+}
+
+
+nav ul li {
+    position: relative;                     /* Pour que le dropdown (position: absolute) se positionne aux coins de ce bouton */
+}
+
+nav ul li a {
+    display: flex;                          /* Active Flexbox a l'interieur du bouton pour gérer le texte */
+    /* Centrage du texte */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    padding: 30px 50px;                     /* Donne du volume aux boutons */
+    color: var(--color-text);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li ul.dropdown {
+    width: 100%;                            /* Prend la même largeur que le parent */
+    background-color: var(--color-bg-alt);
+    position: absolute;                     /* Sort du flux normal du document pour etre au dessus du site : */
+    display: none;                          /* Etat initial, le dropdown est invisible */
+}
+
+nav ul li a:hover {
+    background-color: var(--color-secondary);
+}
+
+nav ul li:hover .dropdown{
+    display: flex;                          /* Rend visible le dropdown */
+    flex-direction: column;                 /* Empile les boutons verticalement */
+}
