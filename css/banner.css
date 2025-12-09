@@ -1,0 +1,46 @@
+.banner {
+    position: relative;                             /* Permet aux enfants d'être positionnés par rapport à ce bloc */
+    width: 100%;
+    height: 75vh;                                   /* Hauteur de 75% de la hauteur de la fenêtre */
+}
+
+/* L'image prend toute la place */
+.banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;                              /* L'image remplit le bloc sans être déformée */
+    z-index: 1;
+}
+
+/* Le voile pour atténuer l'image */
+.banner .overlay {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(255, 255, 255, 0.4);     /* Blanc transparent */
+    z-index: 2;                                       /* Au-dessus de l'image */
+}
+
+/* Voile si mode sombre*/
+body.dark .banner .overlay {
+    background-color: rgba(0, 0, 0, 0.6); /* Noir transparent */
+}
+
+/* Le texte centré */
+.banner-content {
+    position: absolute;
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centrage parfait vertical et horizontal */
+    text-align: center;
+    width: 70%;              /* Marge de sécurité sur les côtés */
+    z-index: 3;              /* Tout au-dessus */
+}
+
+.banner-content h1 {
+    font-size: 4rem;
+    color: var(--color-text);
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
