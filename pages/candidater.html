@@ -6,32 +6,62 @@
     <title>Navbar Inetum</title>
     <link rel="stylesheet" href="../css/colors.css">
     <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/form.css">
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-    <nav>
-        <ul class="menu">
-            <li><a href="#">Accueil</a></li>
-            <li><a href="#">Nous connaître ▼</a>
-                <ul class="dropdown">
-                    <li><a href="#">Qui sommes-nous ?</a></li>
-                    <li><a href="#">Notre histoie</a></li>
-                    <li><a href="#">Nos valeurs</a></li>
-                </ul>
-            </li>
-            <li><a href="#">Votre stage ▼</a>
-                <ul class="dropdown">
-                    <li><a href="#">Offres de stage</a></li>
-                    <li><a href="#">Témoignages</a></li>
-                </ul>
-            </li>
-            <li><a href="#">Contact ▼</a>
-                <ul class="dropdown">
-                    <li><a href="#">Formulaire</a></li>
-                    <li><a href="#">Bureaux</a></li>
-                </ul>
-            </li>
-        </ul>
-    </nav>
+    <header>
+        <nav>
+            <ul class="menu">
+                <li><a href="#">Accueil</a></li>
+                <li><a href="#">Nous connaître ▼</a>
+                    <ul class="dropdown">
+                        <li><a href="#">Qui sommes-nous ?</a></li>
+                        <li><a href="#">Notre histoie</a></li>
+                        <li><a href="#">Nos valeurs</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Votre stage ▼</a>
+                    <ul class="dropdown">
+                        <li><a href="#">Offres de stage</a></li>
+                        <li><a href="#">Témoignages</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Contact ▼</a>
+                    <ul class="dropdown">
+                        <li><a href="#">Formulaire</a></li>
+                        <li><a href="#">Bureaux</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2 class="subtitle">Candiadater pour un stage de 3eme</h1>
+        <form action="#">
+            <div class="form-main">
+                <label for="nom">Nom</label>
+                <label for="prenom">Prénom</label>
+
+                <input type="text" name="nom" id="nom" placeholder="Votre nom">
+                <input type="text" name="prenom" id="prenom" placeholder="Votre prénom">
+
+                <label for="email">Email</label>
+                <label for="cv">CV</label>
+
+                <input type="email" name="email" id="email" placeholder="contactezmoi@vite.com">
+                <input type="file" name="cv" id="cv">
+
+                <label class="complete-row" for="motivations">Motivations</label>
+                <textarea class="complete-row" name="motivations" id="motivations" placeholder="Renseignez vos motivations pour ce stage. Un message personnalisé peut faire la différence."></textarea>
+
+                <button class="complete-row" type="submit">Envoyer ma candidature</button>
+            </div>
+            <div class="form-sidebar">
+
+
+            </div>
+        </form>
+    </main>
 </body>
 </html>

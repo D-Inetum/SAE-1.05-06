@@ -3,3 +3,28 @@ body {
     font-family: sans-serif;
     background-color: var(--color-bg);
 }
+
+main {
+    padding: 5px 2vw;
+}
+
+.subtitle {
+    color: var(--color-text);
+    display: inline-block;
+    position: relative;
+}
+
+.subtitle::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    width: 110%;
+    height: 0.1em;
+
+    background-color: var(--color-primary);
+    border-radius: 4px;
+
+    z-index: -1;
+}
