@@ -5,13 +5,14 @@ body {
 }
 
 main {
-    padding: 5px 2vw;
+    padding: 10px 2vw 100px 2vw;
 }
 
 .subtitle {
     color: var(--color-text);
     display: inline-block;
     position: relative;
+    margin: 20px 0 30px 0;
 }
 
 .subtitle::after {
