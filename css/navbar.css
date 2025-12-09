@@ -1,3 +1,4 @@
+
 nav ul {
     font-size: large;
     margin: 0;
@@ -24,6 +25,9 @@ nav ul li a {
     color: var(--color-text);
     text-decoration: none;
     font-weight: bold;
+
+    border-right: 1px solid var(--color-text);
+    border-left: 1px solid var(--color-text);
 }
 
 nav ul li ul.dropdown {
@@ -31,6 +35,9 @@ nav ul li ul.dropdown {
     background-color: var(--color-bg-alt);
     position: absolute;                     /* Sort du flux normal du document pour etre au dessus du site : */
     display: none;                          /* Etat initial, le dropdown est invisible */
+    left: 0;
+
+    z-index: 1000;                          /* Pour etre sur que le dropdown soit au dessus des autres elements */
 }
 
 nav ul li a:hover {
@@ -40,4 +47,9 @@ nav ul li a:hover {
 nav ul li:hover .dropdown{
     display: flex;                          /* Rend visible le dropdown */
     flex-direction: column;                 /* Empile les boutons verticalement */
+}
+
+nav ul li ul.dropdown a{
+    border-top: 1px solid var(--color-text);
+    border-bottom: 1px solid var(--color-text);
 }

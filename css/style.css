@@ -23,7 +23,7 @@ main {
     width: 110%;
     height: 0.1em;
 
-    background-color: var(--color-primary);
+    background-color: var(--color-accent);
     border-radius: 4px;
 
     z-index: -1;
