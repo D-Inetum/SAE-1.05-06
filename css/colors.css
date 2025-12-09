@@ -21,10 +21,8 @@
         
     /* Couleur pour l'accentuation */
     --color-accent: #d64541;
-}
 
-@media (prefers-color-scheme: dark) {
-    :root {
+    body.dark {
         /* --- Mode Sombre --- */
 
         /* Couleur du texte */
@@ -47,7 +45,5 @@
         
         /* Couleur pour l'accentuation */
         --color-accent: #d64541;
-        
     }
-
 }
