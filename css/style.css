@@ -9,6 +9,7 @@ main {
 }
 
 .subtitle {
+    font-size: 2.25em;
     color: var(--color-text);
     display: inline-block;
     position: relative;
