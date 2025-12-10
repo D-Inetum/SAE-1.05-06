@@ -3,79 +3,117 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Inetum</title>
-    <link rel="stylesheet" href="colors.css">
-    <link rel="stylesheet" href="navbar.css">
-    <link rel="stylesheet" href="style.css">
+    <title>Contact – Inetum</title>
+    
+    <link rel="stylesheet" href="../css/colors.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/Contact.css">
+ 
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <header>
-        <ul class="menu">
-            <li><a href="#">Accueil</a></li>
-            <li><a href="#">Nous connaître ▼</a>
-                <ul class="dropdown">
-                    <li><a href="#">Qui sommes-nous ?</a></li>
-                    <li><a href="#">Notre histoie</a></li>
-                    <li><a href="#">Nos valeurs</a></li>
-                </ul>
-            </li>
-            <li><a href="#">Votre stage ▼</a>
-                <ul class="dropdown">
-                    <li><a href="#">Offres de stage</a></li>
-                    <li><a href="#">Témoignages</a></li>
-                </ul>
-            </li>
-            <li><a href="#">Contact ▼</a>
-                <ul class="dropdown">
-                    <li><a href="#">Formulaire</a></li>
-                    <li><a href="#">Bureaux</a></li>
-                </ul>
-            </li>
-        </ul>
+        <nav>
+            <ul class="menu">
+                <li><a href="#">Accueil</a></li>
+                <li><a href="#">Nous connaître ▼</a>
+                    <ul class="dropdown">
+                        <li><a href="#">Qui sommes-nous ?</a></li>
+                        <li><a href="#">Notre histoire</a></li>
+                        <li><a href="#">Nos valeurs</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Votre stage ▼</a>
+                    <ul class="dropdown">
+                        <li><a href="#">Offres de stage</a></li>
+                        <li><a href="#">Témoignages</a></li>
+                    </ul>
+                </li>
+                <li class="active"><a href="#">Contact ▼</a>
+                    <ul class="dropdown">
+                        <li><a href="#">Formulaire</a></li>
+                        <li><a href="#">Bureaux</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
     </header>
-    <div class="container">
-        <h2>Nous contacter</h2>
+
+    <main class="container">
+
+        <h2 class="section-title">Nous contacter</h2>
+
         <div class="contact-grid">
-        <div class="card">
-        <h3>Adresse email</h3>
-        <p>contact-stage@inetum.fr</p>
-    </div>
-    <div class="card">
-        <h3>Téléphone</h3>
-        <p>+33 (0) 1 44 04 50 00<br />+33 (0) 1 44 04 59 00</p>
-    </div>
-    <div class="card">
-        <h3>Réseaux sociaux</h3>
-        <ul>
-        <li>Instagram</li>
-        <li>Twitter</li>
-        <li>YouTube</li>
-        <li>LinkedIn</li>
-        <li>Facebook</li>
-        </ul>
-    </div>
-    </div>
-    <button>Nous écrire</button>
-    <h2>Nos agences</h2>
-    <div class="agences-container">
-    <div>
-    <h3>France</h3>
-    <ul>
-    <li>Agence 1</li>
-    <li>Agence 2</li>
-    <li>Agence 3</li>
-    </ul>
-    </div>
-    <div>
-    <h3>Internationale</h3>
-    <ul>
-    <li>Agence 1</li>
-    <li>Agence 2</li>
-    <li>Agence 3</li>
-    </ul>
-    </div>
-    </div>
-    <div class="map">Carte</div>
-    </div> 
+            <div class="card">
+                <div class="icon-header"><i class="fa-solid fa-envelope"></i></div>
+                <h3>Adresse email</h3>
+                <p class="email-text">contact-stage@inetum.fr</p>
+            </div>
+
+            <div class="card">
+                <div class="icon-header"><i class="fa-solid fa-phone-volume"></i></div>
+                <h3>Telephone</h3>
+                <p>+33 (0) 1 44 04 50 00</p>
+                <p>+33 (0) 1 44 04 59 00</p>
+            </div>
+
+            <div class="card social-card">
+                <ul class="social-list">
+                    <li><i class="fa-brands fa-instagram icon-insta"></i> Instagram</li>
+                    <li> <span>&#120143;</span>  X</li>
+                    <li><i class="fa-brands fa-youtube icon-yt"></i> YouTube</li>
+                    <li><i class="fa-brands fa-linkedin icon-li"></i> LinkedIn</li>
+                    <li><i class="fa-brands fa-facebook icon-fb"></i> Facebook</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="button-container">
+            <button class="btn-primary">Nous écrire</button>
+        </div>
+
+        <div class="bottom-section">
+            
+            <div class="agency-lists-container">
+                <h2 class="section-title">Nos agences</h2>
+                
+                <div class="lists-wrapper">
+                    <div class="list-col">
+                        <h3>France</h3>
+                        <ul>
+                            <li>Agence 1</li>
+                            <li>Agence 2</li>
+                            <li>Agence 3</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="vertical-separator"></div>
+
+                    <div class="list-col">
+                        <h3>Internationale</h3>
+                        <ul>
+                            <li>Agence 1</li>
+                            <li>Agence 2</li>
+                            <li>Agence 3</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="map-wrapper">
+                <div id="ma-carte"></div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
+    <script src="../js/map.js"></script>
 </body>
 </html>

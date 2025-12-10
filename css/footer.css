@@ -1,0 +1,49 @@
+footer {
+    display: flex;
+    background-color: var(--color-bg-alt);
+    min-height: 350px;
+
+}
+
+footer .agences {
+    display: flex;
+    width: 60%;                                         /* Prend 60% de la largeur du footer */
+    padding: 20px;
+    gap: 30px;                                          /* Espace entre les deux colonnes de texte */
+}
+
+
+footer .colonne-pays {
+    flex: 1;                                            /* Chaque colonne prend la même largeur */
+}
+
+
+/* On ajoute une bordure à droite uniquement sur la première colonne (France) */
+footer .colonne-pays:first-child {
+    border-right: 2px solid var(--color-text);
+    padding-right: 20px;
+}
+
+
+footer #map {
+    width: 40%;                                            /* Prend le reste de la place */
+}
+
+footer h3 {
+    color: var(--color-text);
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    column-count: 3;                                        /* Divise la liste en 3 colonnes */
+}
+
+footer ul li {
+    color: var(--color-text);
+    margin-bottom: 8px;                                     /* Espacement entre les villes/pays */
+    font-size: 0.8rem;
+}

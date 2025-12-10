@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar Inetum</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.Default.css" />
+
+    <link rel="stylesheet" href="../css/colors.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/banner.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/candidater.css">
+    <link rel="stylesheet" href="../css/style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="inetum">
+            <img src="https://images2.imgbox.com/a9/64/slSnCC3I_o.png" alt="Inetum Logo">
+            </div>
+            <ul class="menu">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="#">Nous connaître ▼</a>
+                    <ul class="dropdown">
+                        <li><a href="nous-connaitre.html">Qui sommes-nous ?</a></li>
+                        <li><a href="#">Notre histoire</a></li>
+                        <li><a href="#">Nos valeurs</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Votre stage ▼</a>
+                    <ul class="dropdown">
+                        <li><a href="#">Offres de stage</a></li>
+                        <li><a href="#">Témoignages</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Contact ▼</a>
+                    <ul class="dropdown">
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="candidater.html">Candidater</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <a href="#" id="theme-toggle" aria-label="Changer de thème">
+            <i class="fa-solid fa-moon" style="color: var(--color-text);"></i>
+            </a>
+        </nav>
+
+        <div class="banner">
+        <img src="https://www.lejdd.fr/lmnr/var/jdd/public/media/image/2025/02/09/07/inetum.jpg?VersionId=2suzmsUtHmCHMtgVrcuSDzWrtLnExHgX" alt="Bureaux Inetum">
+    
+        <div class="overlay"></div>
+            <div class="banner-content">
+                <h1>Inetum : une entreprise de service numérique</h1>
+            </div>
+        </div>
+    </header>
+    <main>
+        <h2 class="subtitle">Notre histoire</h2>
+    </main>
+    <footer>
+        <div class="agences">
+            <div class="colonne-pays">
+                <h3>Nos agences en France</h3>
+                <ul>
+                    <li>Aix-En-Provence</li>
+                    <li>Chauray</li>
+                    <li>Grabels</li>
+                    <li>Gradignan</li>
+                    <li>La Chapelle-Sur-Erdre</li>
+                    <li>Lannion</li>
+                    <li>Laxou</li>
+                    <li>Le Mans</li>
+                    <li>Lille</li>
+                    <li>Lyon</li>
+                    <li>Metz</li>
+                    <li>Meudon-La-Forêt</li>
+                    <li>Meylan</li>
+                    <li>Montigny-le-Bretonneux</li>
+                    <li>Nantes</li>
+                    <li>Niort</li>
+                    <li>Nîmes</li>
+                    <li>Orléans</li>
+                    <li>Orthez</li>
+                    <li>Paris</li>
+                    <li>Pau</li>
+                    <li>Reims</li>
+                    <li>Saint-Clément-de-Rivière</li>
+                    <li>Saint-Ouen-sur-Seine</li>
+                    <li>Schiltigheim</li>
+                    <li>Sevilla</li> <li>Sophia-Antipolis</li>
+                    <li>Tarbes</li>
+                    <li>Toulouse</li>
+                    <li>Villeurbanne</li>
+                </ul>
+            </div>
+
+            <div class="colonne-pays">
+                <h3>Nos agences à l'internationale</h3>
+                <ul>
+                    <li>Argentine</li>
+                    <li>Autriche</li>
+                    <li>Belgique</li>
+                    <li>Brésil</li>
+                    <li>Bulgarie</li>
+                    <li>Chili</li>
+                    <li>Colombie</li>
+                    <li>Costa Rica</li>
+                    <li>Espagne</li> <li>France</li>  <li>Luxembourg</li>
+                    <li>Maroc</li>
+                    <li>Mexique</li>
+                    <li>Pologne</li>
+                    <li>Portugal</li>
+                    <li>Pérou</li>
+                    <li>Roumanie</li>
+                    <li>Royaume-Uni</li>
+                    <li>République dominicaine</li>
+                    <li>Suisse</li>
+                    <li>Tunisie</li>
+                    <li>États-Unis</li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="map">
+            </div>
+    </footer>
+    
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet.markercluster@1.4.1/dist/leaflet.markercluster.js"></script>
+
+    <script src="../js/map.js"></script>
+
+    <script src="../js/theme.js"></script>
+</body>
+</html>

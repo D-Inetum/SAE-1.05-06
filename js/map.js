@@ -1,8 +1,8 @@
 // --- 1. Initialisation de la carte ---
 // On centre sur le centre de la France par défaut (Latitude, Longitude), Zoom 5
-const map = L.map('ma-carte', {
-    minZoom: 3, // L'utilisateur ne pourra pas dézoomer plus loin que 3
-}).setView([46.7646, 2.5319], 5); // On commence au niveau 13
+const map = L.map('map', {
+    minZoom: 2, // L'utilisateur ne pourra pas dézoomer plus loin que 3
+}).setView([46.7646, 2.5319], 5); // On commence au niveau 5
 
 // --- 2. Ajout du thème de la carte
 L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {

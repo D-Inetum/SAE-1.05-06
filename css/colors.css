@@ -14,17 +14,15 @@
     --color-bg-alt: #e3e7eb;
     
     /* Couleur d'action principale (boutons, liens importants) */
-    --color-primary: #d64541;
-    
+    --color-primary: #e06c68;
+        
     /* Coleur des éléments secondaires ou de support */
-    --color-secondary: #028075;
-    
+    --color-secondary: #2ba89c;
+        
     /* Couleur pour l'accentuation */
-    --color-accent: #026b61;
-}
+    --color-accent: #d64541;
 
-@media (prefers-color-scheme: dark) {
-    :root {
+    body.dark {
         /* --- Mode Sombre --- */
 
         /* Couleur du texte */
@@ -40,13 +38,12 @@
         --color-bg-alt: #2e3a5e;
         
         /* Couleur d'action principale (boutons, liens importants) */
-        --color-primary: #d64541;
+        --color-primary: #e06c68;
         
         /* Coleur des éléments secondaires ou de support */
         --color-secondary: #2ba89c;
         
         /* Couleur pour l'accentuation */
-        --color-accent: #e06c68;
+        --color-accent: #d64541;
     }
-
 }
