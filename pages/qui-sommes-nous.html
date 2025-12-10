@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Navbar Inetum</title>
-
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     
     <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.css" />
@@ -12,8 +11,8 @@
 
     <link rel="stylesheet" href="../css/colors.css">
     <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/banner.css">
     <link rel="stylesheet" href="../css/footer.css">
-    <link rel="stylesheet" href="../css/candidater.css">
     <link rel="stylesheet" href="../css/style.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -57,91 +56,20 @@
             <i class="fa-solid fa-moon" style="color: var(--color-text);"></i>
             </a>
         </nav>
+
+        <div class="banner">
+        <img src="https://www.lejdd.fr/lmnr/var/jdd/public/media/image/2025/02/09/07/inetum.jpg?VersionId=2suzmsUtHmCHMtgVrcuSDzWrtLnExHgX" alt="Bureaux Inetum">
+    
+        <div class="overlay"></div>
+            <div class="banner-content">
+                <h1>Inetum : une entreprise de service numérique</h1>
+            </div>
+        </div>
     </header>
     <main>
-        <h2 class="subtitle">Candidater pour un stage de 3eme</h2>
-        <form action="#">
-            <div class="form-main">
-
-                <div class="info">
-                    <label for="nom">Nom</label>
-                    <input type="text" name="nom" id="nom" placeholder="Votre nom" required>
-                </div>
-                
-                <div class="info">
-                    <label for="prenom">Prénom</label>
-                    <input type="text" name="prenom" id="prenom" placeholder="Votre prénom" required>
-                </div>
-            
-                <div class="info">
-                    <label for="email">Email</label>
-                    <input type="email" name="email" id="email" placeholder="contactezmoi@vite.com" required>
-                </div>
-
-                <div class="info">
-                    <label for="cv">CV</label>
-                    <input type="file" name="cv" id="cv" required>
-                    <label for="cv" class="btn-upload"><i class="fa-solid fa-paperclip" style="color: var(--color-text);"></i> Ajouter mon CV</label>
-                </div>
-
-                <div class="info complete-row">
-                    <label for="motivations">Motivations</label>
-                    <textarea name="motivations" id="motivations" placeholder="Renseignez vos motivations pour ce stage. Un message personnalisé peut faire la différence." required></textarea>
-                </div>
-                
-                <button class="complete-row" type="submit"><i class="fa-solid fa-paper-plane" style="color: var(--color-text);"></i> Envoyer ma candidature</button>
-            </div>
-            <div class="form-sidebar">
-                <div class="info">
-                    <label for="section"><i class="fa-solid fa-suitcase" style="color: var(--color-primary);"></i> Section</label>
-                    <select name="section" id="section" required>
-                        <option value="">-- Sélectionnez une section --</option>
-                        <option value="tech">Informatique & Technique</option>
-                        <option value="com">Communication & Design</option>
-                        <option value="num">Métiers du numérique</option>
-                    </select>
-                </div>
-
-                <div class="info">
-                    <label for="endroit"><i class="fa-solid fa-location-dot" style="color: var(--color-primary);"></i> Endroit</label>
-                    <select name="endroit" id="endroit" required>
-                        <option value="">-- Sélectionnez un endroit --</option>
-                        <option value="Aix-En-Provence​">Aix-En-Provence​</option>
-                        <option value="Chauray">Chauray</option>
-                        <option value="Grabels">Grabels</option>
-                        <option value="Gradignan">Gradignan</option>
-                        <option value="La Chapelle-Sur-Erdre​">La Chapelle-Sur-Erdre​</option>
-                        <option value="Lannion">Lannion</option>
-                        <option value="Laxou">Laxou</option>
-                        <option value="Le Mans">Le Mans</option>
-                        <option value="Lille">Lille</option>
-                        <option value="Lyon">Lyon</option>
-                        <option value="Metz">Metz</option>
-                        <option value="Meudon-La-Forêt">Meudon-La-Forêt</option>
-                        <option value="Meylan">Meylan</option>
-                        <option value="Montigny-le-Bretonneux">Montigny-le-Bretonneux</option>
-                        <option value="Nantes">Nantes</option>
-                        <option value="Niort">Niort</option>
-                        <option value="Nîmes">Nîmes</option>
-                        <option value="Orléans">Orléans</option>
-                        <option value="Orthez">Orthez</option>
-                        <option value="Paris">Paris</option>
-                        <option value="Pau">Pau</option>
-                        <option value="Reims">Reims</option>
-                        <option value="Saint-Clément-de-Rivière​">Saint-Clément-de-Rivière​</option>
-                        <option value="Saint-Ouen-sur-Seine">Saint-Ouen-sur-Seine</option>
-                        <option value="Schiltigheim​">Schiltigheim​</option>
-                        <option value="Sevilla">Sevilla</option>
-                        <option value="Sophia-Antipolis​">Sophia-Antipolis​</option>
-                        <option value="Tarbes">Tarbes</option>
-                        <option value="Toulouse">Toulouse</option>
-                        <option value="Villeurbanne​">Villeurbanne​</option>
-                    </select>
-                </div>
-            </div>
-        </form>
+        <h2 class="subtitle">Notre histoire</h2>
     </main>
-        <footer>
+    <footer>
         <div class="agences">
             <div class="colonne-pays">
                 <h3>Nos agences en France</h3>
@@ -213,7 +141,8 @@
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script src="https://unpkg.com/leaflet.markercluster@1.4.1/dist/leaflet.markercluster.js"></script>
 
-    <script src="../js/theme.js"></script>
     <script src="../js/map.js"></script>
+
+    <script src="../js/theme.js"></script>
 </body>
 </html>
