@@ -13,7 +13,8 @@ main {
 }
 
 .subtitle {
-    font-size: 2.25em;
+    font-weight: 800;
+    font-size: 2em;
     color: var(--color-text);
     display: inline-block;
     position: relative;
@@ -26,7 +27,7 @@ main {
     left: 0;
     bottom: 0;
 
-    width: 110%;
+    width: 106%;
     height: 0.1em;
 
     background-color: var(--color-accent);
