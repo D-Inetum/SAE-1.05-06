@@ -4,7 +4,7 @@ const defaultText = "Ajouter mon CV";
 
 inputCv.addEventListener('change', function(event) {
     // On vérifie s'il y a un fichier sélectionné
-    if (this.files && this.files.length > 0) {
+    if (this.files) {
         // On récupère le nom du fichier
         const fileName = this.files[0].name;
         // On met à jour le texte

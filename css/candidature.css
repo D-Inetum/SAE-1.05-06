@@ -20,6 +20,7 @@ form {
     display: flex;                                      /* On utilise flexbox pour aligner les label/inputs en colonne */
     flex-direction: column;
     gap: 5px;
+    min-width: 0;
 }
 
 .form-sidebar {
@@ -63,7 +64,6 @@ input:focus, textarea:focus, select:focus {
     box-shadow: none;
 }
 
-/* --- MODIFIER CE BLOC --- */
 .btn-upload, button[type="submit"] {
     /* On leur donne l'apparence d'un input pour la hauteur et l'alignement */
     padding: 10px; 
@@ -83,18 +83,12 @@ input:focus, textarea:focus, select:focus {
     font-size: 1em;
     transition: background-color 0.3s;
 
-    /* AJOUT IMPORTANT : Empêche le bouton de dépasser de son parent */
-    max-width: 100%; 
-    width: 100%;
-    box-sizing: border-box;
 }
 
-/* --- AJOUTER CE NOUVEAU BLOC JUSTE EN DESSOUS --- */
 /* C'est ce qui gère les "..." si le nom du fichier est trop long */
 .btn-upload span {
-    white-space: nowrap;      /* Interdit le retour à la ligne */
-    overflow: hidden;         /* Cache ce qui dépasse */
-    text-overflow: ellipsis;  /* Ajoute "..." à la fin */
+    overflow: hidden;         /* Coupe le texte */
+    text-overflow: ellipsis;  /* Met les "..." */
 }
 
 .btn-upload:hover, button[type="submit"]:hover {

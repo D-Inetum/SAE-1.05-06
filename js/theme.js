@@ -35,8 +35,6 @@ if (savedTheme === 'dark') {
 }
 // Écouteur d'événement sur le clic
 toggleButton.addEventListener('click', (e) => {
-    e.preventDefault(); // Empêche le lien de remonter en haut de page
-    
     // Si le body a déjà la classe dark, on passe en light, sinon l'inverse
     if (body.classList.contains('dark')) {
         enableLightMode();
