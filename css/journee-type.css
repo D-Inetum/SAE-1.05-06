@@ -1,0 +1,27 @@
+.img-container {
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img {
+    max-width: 100%;                            /* L'image ne dépasse jamais l'écran */
+    max-height: 120vh;
+}
+
+/* MODE CLAIR */
+body.light .img-sombre {
+    display: none;
+}
+body.light .img-clair {
+    display: block;
+}
+
+/* MODE SOMBRE */
+body.dark .img-clair {
+    display: none;
+}
+body.dark .img-sombre {
+    display: block;
+}

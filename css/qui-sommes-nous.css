@@ -1,17 +1,3 @@
-.presentation-block {
-    color: var(--color-text);
-}
-
-.presentation-block p {
-    text-align: justify;
-    margin-bottom: 15px;
-}
-
-.presentation-block ul {
-    padding-left: 20px;
-    margin-left: 10px;
-}
-
 .separation {
     margin: 50px 0;
     opacity: 0.1;
