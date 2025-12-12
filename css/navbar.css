@@ -41,7 +41,7 @@ nav ul li ul.dropdown {
     display: none;                          /* Etat initial, le dropdown est invisible */
     left: 0;
 
-    z-index: 1000;                          /* Pour etre sur que le dropdown soit au dessus des autres elements */
+    z-index: 10000;                         /* Pour etre sur que le dropdown soit au dessus des autres elements */
 }
 
 nav ul li a:hover {
