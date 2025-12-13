@@ -109,19 +109,23 @@
     font-size: 1.2em;
 }
 
+/* Couleurs des marques */
 .fa-instagram { color: #E1306C; }
 .fa-x-twitter { color: var(--color-text); }
 .fa-youtube   { color: #FF0000; }
 .fa-linkedin  { color: #0077b5; }
 .fa-facebook  { color: #1877F2; }
 
+/* --- ANIMATIONS & HOVER EFFECTS --- */
 
+/* 1. Effet sur la CARTE entière (Lévitation) */
 .contact-card:hover {
     transform: translateY(-7px); 
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); 
     border-color: var(--color-primary); 
 }
 
+/* 2. Effet sur l'ICÔNE principale */
 .icon-header i {
     transition: transform 0.3s ease, color 0.3s;
 }
@@ -131,6 +135,7 @@
     color: var(--color-primary); 
 }
 
+/* 3. Effet sur les LIENS TEXTE (Email & Tel) */
 .contact-card p a {
     position: relative;
     transition: color 0.2s;
@@ -145,4 +150,23 @@
     position: absolute;
     width: 0;
     height: 2px;
-    bottom: -2
+    bottom: -2px;
+    left: 0;
+    background-color: var(--color-primary);
+    transition: width 0.3s;
+}
+
+.contact-card p a:hover::after {
+    width: 100%;
+}
+
+/* 4. Effet sur les RÉSEAUX SOCIAUX (Slide) */
+/* CORRIGÉ ICI (j'ai enlevé le / au début) */
+.social-list li a:hover {
+    transform: translateX(10px); 
+    color: var(--color-primary);
+}
+
+.social-list li a:hover i {
+    transform: scale(1.2); 
+}
