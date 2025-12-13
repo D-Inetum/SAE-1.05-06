@@ -1,4 +1,4 @@
-/* --- Section Globale --- */
+/* --- SECTION ET TITRE --- */
 .contact-section {
     padding: 40px 10%;
     color: var(--color-text);
@@ -9,39 +9,38 @@
     font-weight: 700;
     margin-bottom: 35px;
     display: inline-block;
-    /* La petite barre rouge sous le titre */
     border-bottom: 3px solid #d9393e; 
     padding-bottom: 5px;
 }
 
-/* --- Conteneur des 3 cartes --- */
+/* --- MISE EN PAGE (CONTENEUR) --- */
 .contact-container {
     display: flex;
-    gap: 5vw; 
-    flex-wrap: wrap; 
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 2vw;
 }
 
-/* --- Style des Cartes (Email, Tel, Réseaux) --- */
+/* --- STYLE DES CARTES --- */
 .contact-card {
     background-color: var(--color-bg-alt); 
     border: 1px solid var(--color-text);  
     border-radius: 5px;                   
-    padding: 20px 30px;                    
+    padding: 25px 20px;
     
-    flex: 1;                               
-    min-width: 250px;                     
+    flex: 1;
+    min-width: 0;
     
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
     
-    /* Transition pour l'animation */
     transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s;
 }
 
-/* Icônes en haut des cartes */
+/* --- ÉLÉMENTS INTERNES (ICÔNES, TITRES, TEXTE) --- */
 .icon-header {
-    font-size: 2em;
+    font-size: 2.2em;
     margin-bottom: 20px;
     color: var(--color-text);
 }
@@ -57,35 +56,30 @@
     color: var(--color-text);
     text-decoration: none;
     font-size: 1em;
-    margin-bottom: 5px;
-    line-height: 1.5;
+    margin-bottom: 8px;
+    line-height: 1.4;
 }
 
-/* --- Le Bouton "Nous écrire" --- */
+/* --- BOUTON ACTION --- */
 .btn-contact {
-    margin-top: 20px;
-    padding: 10px;
+    margin-top: auto;
+    padding: 12px 20px;
     border-radius: 5px;
     border: 1px solid transparent;
     
     background-color: var(--color-primary); 
-    color: var(--color-text);               
-    display: inline-block; /* CORRIGÉ ICI (j'ai enlevé le /) */
+    color: var(--color-text) !important;
+    
+    display: inline-block;
     text-align: center;
     cursor: pointer;
-    font-weight: 400;
+    font-weight: 500;
     text-decoration: none;
     
     transition: all 0.3s ease;
 }
 
-.btn-contact:hover {
-    background-color: var(--color-accent);
-    transform: scale(1.05);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-}
-
-/* --- Liste Réseaux Sociaux --- */
+/* --- LISTE RÉSEAUX SOCIAUX --- */
 .social-list {
     list-style: none; 
     padding: 0;
@@ -99,33 +93,33 @@
 .social-list li a {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
     transition: transform 0.2s ease, color 0.2s;
 }
 
 .social-list i {
     width: 25px; 
     text-align: center;
-    font-size: 1.2em;
+    font-size: 1.3em;
 }
 
-/* Couleurs des marques */
+/* Couleurs spécifiques */
 .fa-instagram { color: #E1306C; }
 .fa-x-twitter { color: var(--color-text); }
 .fa-youtube   { color: #FF0000; }
 .fa-linkedin  { color: #0077b5; }
 .fa-facebook  { color: #1877F2; }
 
-/* --- ANIMATIONS & HOVER EFFECTS --- */
+/* --- ANIMATIONS ET SURVOL (HOVER) --- */
 
-/* 1. Effet sur la CARTE entière (Lévitation) */
+/* Carte globale */
 .contact-card:hover {
     transform: translateY(-7px); 
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); 
     border-color: var(--color-primary); 
 }
 
-/* 2. Effet sur l'ICÔNE principale */
+/* Icône principale */
 .icon-header i {
     transition: transform 0.3s ease, color 0.3s;
 }
@@ -135,10 +129,11 @@
     color: var(--color-primary); 
 }
 
-/* 3. Effet sur les LIENS TEXTE (Email & Tel) */
+/* Liens texte (Soulignement) */
 .contact-card p a {
     position: relative;
     transition: color 0.2s;
+    display: inline-block;
 }
 
 .contact-card p a:hover {
@@ -160,8 +155,7 @@
     width: 100%;
 }
 
-/* 4. Effet sur les RÉSEAUX SOCIAUX (Slide) */
-/* CORRIGÉ ICI (j'ai enlevé le / au début) */
+/* Liens réseaux sociaux (Glissement) */
 .social-list li a:hover {
     transform: translateX(10px); 
     color: var(--color-primary);
@@ -169,4 +163,23 @@
 
 .social-list li a:hover i {
     transform: scale(1.2); 
+}
+
+/* Bouton */
+.btn-contact:hover {
+    background-color: var(--color-accent);
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* --- RESPONSIVE MOBILE --- */
+@media (max-width: 900px) {
+    .contact-container {
+        flex-direction: column; 
+        gap: 30px;
+    }
+    
+    .contact-card {
+        width: 100%;
+    }
 }
