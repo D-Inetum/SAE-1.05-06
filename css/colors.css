@@ -47,3 +47,7 @@
         --color-accent: #d64541;
     }
 }
+
+* {
+    transition: background-color 0.4s ease, color 0.4s ease;
+}

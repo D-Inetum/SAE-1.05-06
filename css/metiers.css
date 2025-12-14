@@ -14,13 +14,16 @@
     text-align: center;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
     border: 1px solid var(--color-text);
-    transition: transform 0.3s ease;                                    /* Pour l'effet au survol */
-    transition: box-shadow 0.4s ease-in-out;
+    transition:                                                         /* Ajout des transitions pour les effets au survol */
+        transform 0.3s ease, 
+        box-shadow 0.4s ease-in-out, 
+        border-color 0.4s ease-in-out;
 }
 
 .job-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 0 30px var(--color-accent);
+    border-color: var(--color-primary);
 }
 
 .card-icon {
