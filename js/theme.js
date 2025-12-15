@@ -1,6 +1,7 @@
 const toggleButton = document.getElementById('theme-toggle');
 const icon = toggleButton.querySelector('i');
 const body = document.body;
+
 // Fonction pour appliquer le mode Sombre
 const enableDarkMode = () => {
     body.classList.add('dark');
@@ -9,6 +10,7 @@ const enableDarkMode = () => {
     icon.classList.add('fa-sun');     // Met le soleil
     localStorage.setItem('theme', 'dark'); // Sauvegarde
 };
+
 // Fonction pour appliquer le mode Clair
 const enableLightMode = () => {
     body.classList.add('light');
@@ -21,6 +23,7 @@ const enableLightMode = () => {
 // Vérification au chargement de la page
 const savedTheme = localStorage.getItem('theme');
 const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
 if (savedTheme === 'dark') {
     enableDarkMode();
 } else if (savedTheme === 'light') {
@@ -33,6 +36,7 @@ if (savedTheme === 'dark') {
         enableLightMode();
     }
 }
+
 // Écouteur d'événement sur le clic
 toggleButton.addEventListener('click', (e) => {
     // Si le body a déjà la classe dark, on passe en light, sinon l'inverse
