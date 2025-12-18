@@ -2,7 +2,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));            /* Crée des colonnes d'au moins 500px de large, autant que possible */
     gap: 2vw;
-    padding: 20px;
+    padding: 20px 10px;
 }
 
 .card {
