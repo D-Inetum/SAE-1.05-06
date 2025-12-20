@@ -5,10 +5,12 @@
 
 /* --- MISE EN PAGE (CONTENEUR) --- */
 .contact-container {
-    padding: 0 10%;
+    padding: 0 5%; 
+    max-width: 1200px;
+    margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2vw;
+    gap: 2rem;
 }
 
 /* --- STYLE DES CARTES --- */
@@ -18,22 +20,25 @@
     border-radius: 5px;                   
     padding: 25px 20px;
     
-    flex: 1;
     min-width: 0;
     
     display: flex;
     flex-direction: column;
     
-    transition:                                                         /* Ajout des transitions pour les effets au survol */
-        transform 0.3s ease, 
-        box-shadow 0.4s ease-in-out, 
-        border-color 0.4s ease-in-out;
+   
+    transition: transform 0.3s ease, box-shadow 0.4s ease-in-out, border-color 0.4s ease-in-out;
 }
 
-/* --- ÉLÉMENTS INTERNES (ICÔNES, TITRES, TEXTE) --- */
+/* --- ÉLÉMENTS INTERNES --- */
 .icon-header {
     font-size: 2.2em;
     margin-bottom: 20px;
+}
+
+/* Icône principale : Plus d'animation au survol */
+.icon-header i {
+    color: var(--color-text);
+    /* Transition supprimée */
 }
 
 .contact-card h3 {
@@ -42,18 +47,22 @@
     font-weight: 600;
 }
 
-.contact-card p, 
-.contact-card a {
+.contact-card p {
     color: var(--color-text);
-    text-decoration: none;
     font-size: 1em;
     margin-bottom: 8px;
     line-height: 1.4;
 }
 
+/* --- LIENS (TEL & MAIL) --- */
+.contact-card p a {
+    color: var(--color-text);
+    text-decoration: none;
+    cursor: pointer;
+}
+
 /* --- BOUTON ACTION --- */
 .btn-contact {
-    /* On leur donne l'apparence d'un input pour la hauteur et l'alignement */
     padding: 10px; 
     border-radius: 5px;
     text-decoration: none;
@@ -69,8 +78,7 @@
     cursor: pointer;
     font-size: 1em;
     transition: background-color 0.3s;
-    grid-column: 2;
-
+    margin-top: auto; /* Pousse le bouton vers le bas */
 }
 
 .btn-contact:hover {
@@ -79,25 +87,22 @@
 
 /* --- LISTE RÉSEAUX SOCIAUX --- */
 .social-list {
-    height: 100%;
     display: flex;
     flex-direction: column;
     list-style: none; 
     padding: 0;
-    margin: 0;
-}
-
-.social-list li {
-    flex:1;
-    display: flex;
+    margin-top: 15px;
+    gap: 10px;
 }
 
 .social-list li a {
-    margin: 0;
+    text-decoration: none; 
+    
     display: flex;
     align-items: center;
     gap: 12px;
     font-size: 1.1em;
+    color: var(--color-text);
     transition: transform 0.2s ease, color 0.2s;
 }
 
@@ -107,61 +112,23 @@
     font-size: 1.3em;
 }
 
-/* Couleurs spécifiques */
+/* Couleurs spécifiques Réseaux */
 .fa-instagram { color: #E1306C; }
 .fa-x-twitter { color: var(--color-text); }
 .fa-youtube   { color: #FF0000; }
 .fa-linkedin  { color: #0077b5; }
 .fa-facebook  { color: #1877F2; }
 
-/* --- ANIMATIONS ET SURVOL (HOVER) --- */
+/* --- ANIMATIONS RESTANTES --- */
 
-/* Carte globale */
+/* Carte globale : On garde l'effet de soulèvement */
 .contact-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 0 30px var(--color-accent);
     border-color: var(--color-primary); 
 }
 
-
-/* Icône principale */
-.icon-header i {
-    transition: transform 0.3s ease, color 0.3s;
-}
-
-.contact-card:hover .icon-header i {
-    transform: scale(1.15); 
-    color: var(--color-primary); 
-}
-
-/* Liens texte (Soulignement) */
-.contact-card p a {
-    position: relative;
-    transition: color 0.2s;
-    display: inline-block;
-
-}
-
-.contact-card p a:hover {
-    color: var(--color-primary);
-}
-
-.contact-card p a::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: -2px;
-    left: 0;
-    background-color: var(--color-primary);
-    transition: width 0.3s;
-}
-
-.contact-card p a:hover::after {
-    width: 100%;
-}
-
-/* Liens réseaux sociaux (Glissement) */
+/* Liens réseaux sociaux : On garde le petit glissement vers la droite */
 .social-list li a:hover {
     transform: translateX(10px); 
     color: var(--color-primary);
