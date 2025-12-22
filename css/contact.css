@@ -19,13 +19,6 @@
     border: 1px solid var(--color-text);  
     border-radius: 5px;                   
     padding: 25px 20px;
-    
-    min-width: 0;
-    
-    display: flex;
-    flex-direction: column;
-    
-   
     transition: transform 0.3s ease, box-shadow 0.4s ease-in-out, border-color 0.4s ease-in-out;
 }
 
@@ -35,10 +28,9 @@
     margin-bottom: 20px;
 }
 
-/* Icône principale : Plus d'animation au survol */
+
 .icon-header i {
     color: var(--color-text);
-    /* Transition supprimée */
 }
 
 .contact-card h3 {
@@ -79,7 +71,6 @@
     cursor: pointer;
     font-size: 1em;
     transition: background-color 0.3s;
-    margin-top: auto; /* Pousse le bouton vers le bas */
 }
 
 .btn-contact:hover {
@@ -133,8 +124,4 @@
 .social-list li a:hover {
     transform: translateX(10px); 
     color: var(--color-primary);
-}
-
-.social-list li a:hover i {
-    transform: scale(1.2); 
 }
