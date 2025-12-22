@@ -1,17 +1,17 @@
-// --- 1. Initialisation de la carte ---
+// --- Initialisation de la carte ---
 // On centre sur le centre de la France par défaut (Latitude, Longitude), Zoom 5
 const map = L.map('map', {
     minZoom: 2, // L'utilisateur ne pourra pas dézoomer plus loin que 3
+    maxZoom: 20
 }).setView([46.7646, 2.5319], 5); // On commence au niveau 5
 
-// --- 2. Ajout du thème de la carte
+// --- Ajout du thème de la carte
 L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>',
     subdomains: 'abcd',
-    maxZoom: 20
 }).addTo(map);
 
-// --- 3. Données des lieux ---
+// --- Données des lieux ---
 const lieux = [
     {
         "lat": 40.479002,
@@ -806,43 +806,40 @@ const lieux = [
     }
 ];
 
-// --- 4. Gestion des marqueurs et clusters ---
+// --- Gestion des marqueurs et clusters ---
 
 const markers = L.markerClusterGroup();
 
 lieux.forEach(lieu => {
-    // Sécurité : on vérifie que les coordonnées existent
-    if (lieu.lat && lieu.lng) {
-        
-        const marker = L.marker([lieu.lat, lieu.lng]);
+    // Création du marqueur
+    const marker = L.marker([lieu.lat, lieu.lng]);
 
-        // --- DESIGN DE LA POPUP ---
-        let htmlContent = `
-            <div style="font-family: sans-serif; font-size: 13px; color: #333; min-width: 200px;">
-                
-                <h3 style="margin: 0 0 5px 0; font-size: 15px; font-weight: bold; color: #000;">
-                    ${lieu.ville}
-                </h3>
+    // Préparation du contenu HTML de la popup
+    let htmlContent = `
+        <div style="font-family: sans-serif; font-size: 13px; color: #333">
+            <h3 style="margin: 0 0 5px 0; font-size: 15px; font-weight: bold; color: #000;">
+                ${lieu.ville}
+            </h3>
 
-                <div style="margin-bottom: 8px; color: #555; line-height: 1.4;">
-                    ${lieu.adresse}
-                </div>
-
-                ${lieu.tel ? `
-                    <div>
-                        <a href="tel:${lieu.tel.replace(/\s/g, '')}" 
-                           style="color: #0078D7; text-decoration: none; font-weight: 600;">
-                           ${lieu.tel}
-                        </a>
-                    </div>
-                ` : ''}
-
+            <div style="margin-bottom: 8px; color: #555; line-height: 1.4;">
+                ${lieu.adresse}
             </div>
-        `;
 
-        marker.bindPopup(htmlContent);
-        markers.addLayer(marker);
-    }
+            ${lieu.tel ? `
+                <div>
+                    <a href="tel:${lieu.tel}" 
+                       style="color: #0078D7; text-decoration: none; font-weight: 600;">
+                       ${lieu.tel}
+                    </a>
+                </div>
+            ` : ''}
+        </div>
+    `;
+
+    // Liaison de la popup et ajout au groupe de clusters
+    marker.bindPopup(htmlContent);
+    markers.addLayer(marker);
 });
 
+// Ajout final du groupe à la carte
 map.addLayer(markers);
