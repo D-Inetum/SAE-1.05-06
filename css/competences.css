@@ -1,0 +1,30 @@
+/* Les 4 cartes */
+.cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 35px 140px;
+    padding: 20px 0 10px;
+}
+
+.card {
+    background-color: var(--color-bg-alt);
+    border: 1px solid var(--color-text);
+    padding: 12px 14px;
+    box-sizing: border-box;
+    min-height: 95px;
+}
+
+.card h3 {
+    font-size: 13px;
+    font-weight: 700;
+    margin:0 0 8px 0;
+    color: var(--color-accent);
+    text-transform: uppercase;
+}
+
+.card p {
+    font-size: 12.5px;
+    line-height: 1.35;
+    color: var(--color-text);
+    margin: 0;
+}
