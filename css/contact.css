@@ -63,6 +63,7 @@
 
 /* --- BOUTON ACTION --- */
 .btn-contact {
+    grid-column: 2/3;
     padding: 10px; 
     border-radius: 5px;
     text-decoration: none;
