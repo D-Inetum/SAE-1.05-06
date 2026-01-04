@@ -27,8 +27,6 @@
 }
 
 .card-icon {
-    height: 100px;
-    width: auto;
     font-size: 4.5em;
     color: var(--color-text);
 }
