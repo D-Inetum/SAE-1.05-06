@@ -15,7 +15,7 @@
 }
 
 .card h3 {
-    font-size: 13px;
+    font-size: 1.1em;
     font-weight: 700;
     margin:0 0 8px 0;
     color: var(--color-accent);
@@ -23,8 +23,13 @@
 }
 
 .card p {
-    font-size: 12.5px;
+    font-size: 1em;
     line-height: 1.35;
     color: var(--color-text);
     margin: 0;
+}
+
+.title-icon {
+    display: flex;
+    gap: 8px;
 }

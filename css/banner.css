@@ -28,19 +28,31 @@ body.dark .banner .overlay {
 
 /* Le texte centré */
 .banner-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3vh;
     position: absolute;
     top: 50%; 
     left: 50%;
     transform: translate(-50%, -50%);                   /* Centrage parfait vertical et horizontal */
-    text-align: center;
     width: 70%;                                         /* Marge de sécurité sur les côtés */
     z-index: 3;                                         /* Tout au-dessus */
 }
 
 .banner-content h1 {
-    font-size: 4rem;
     color: var(--color-text);
+    font-size: 4rem;
     font-weight: 800;
     text-transform: uppercase;
+    margin-bottom: 5px;
+    margin: 0;
+}
+
+.banner-content p {
+    color: var(--color-text);
+    font-size: 1.2rem;
+    margin: 0;
+    font-weight: 500;
 }
 

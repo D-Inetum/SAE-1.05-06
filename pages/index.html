@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
-    <title>Menu</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inetum - Accueil</title>
+    
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     
     <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.css" />
@@ -11,15 +13,13 @@
     <link rel="stylesheet" href="../css/colors.css">
     <link rel="stylesheet" href="../css/navbar.css">
     <link rel="stylesheet" href="../css/footer.css">
-    <link rel="stylesheet" href="../css/candidater.css">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/banner.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
-
-
 <body>
-
     <header>
         <nav>
             <div class="inetum">
@@ -28,81 +28,82 @@
 
             <ul class="menu">
                 <li><a href="index.html">Accueil</a></li>
-
                 <li><a href="#">Nous connaître ▼</a>
                     <ul class="dropdown">
                         <li><a href="qui-sommes-nous.html">Qui sommes-nous ?</a></li>
                         <li><a href="metiers.html">Nos métiers du numérique</a></li>
-                        <li><a href="valeurs.html">Nos valeurs & RSE</a></li>
                     </ul>
                 </li>
-            
                 <li><a href="#">Votre stage ▼</a>
                     <ul class="dropdown">
                         <li><a href="journee-type.html">Une journée type</a></li>
                         <li><a href="competences.html">Ce que tu vas apprendre</a></li>
                         <li><a href="temoignages.html">Témoignages d'anciens</a></li>
-                        <li><a href="faq.html">FAQ du stagiaire</a></li>
                     </ul>
                 </li>
-            
                 <li><a href="#">Contact ▼</a>
                     <ul class="dropdown">
-                        <li><a href="candidature.html">Postuler au stage</a></li> <li><a href="conseils.html">Conseils pour ta candidature</a></li>
+                        <li><a href="candidature.html">Postuler au stage</a></li>
                         <li><a href="contact.html">Nos coordonnées</a></li>
                     </ul>
                 </li>
             </ul>
 
             <a href="#" id="theme-toggle" aria-label="Changer de thème">
-            <i class="fa-solid fa-moon" style="color: var(--color-text);"></i>
+                <i class="fa-solid fa-moon" style="color: var(--color-text);"></i>
             </a>
         </nav>
+
+        <div class="banner">
+        <img src="https://e3mag.com/wp-content/uploads/2025/02/inetum-1000x450-1.png" alt="Bureaux Inetum">
+    
+        <div class="overlay"></div>
+            <div class="banner-content">
+                <h1>Inetum, acteur clé du numérique</h1>
+                <p>Découvre Inetum et ses métiers : le guide pratique pour réussir ton stage de 3ème.</p>
+                <a href="candidature.html" class="btn-banner">Nous rejoindre</a>
+            </div>
+        </div>
     </header>
 
-    <section>
-        <h1>Inétum, acteur clé du numérique</h1>
-        <p>Découvre Inétum et ses métiers : le guide pratique pour réussir ton stage de 3ème.</p>
-        <button>Nous rejoindre</button>
-    </section>
-    <hr>
+    <main>
+        <h2 class="subtitle">Nous connaître</h2>
+        <section class="home-section">
+            <div class="content">
+                    <img src="../img/inetum.webp" alt="Entreprise Inetum" class="section-img">
+                <p>Inetum est une ESN internationale présente dans 19 pays. Notre mission, le "Positive Digital Flow", vise à rendre le numérique utile et simple pour tous à travers le développement web, la cybersécurité et l'intelligence artificielle.</p>
+            </div>
+            <div class="btn-container">
+                <a href="qui-sommes-nous.html" class="btn-secondary">En Savoir Plus</a>
+            </div>
+        </section>
 
-    <section>
-        <h2>Nous connaître</h2>
-        <article>
-            <img src="bat1.png" alt="bat1">
-            <p>ppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp
-            </p>
-        </article>
-        <button>En Savoir Plus</button>
-    </section>
-    <hr>
+        <hr>
+        <h2 class="subtitle">Votre stage</h2>
+        <section class="home-section">
+            <div class="content">
+                <img src="../img/journee-type/journee-type-clair.webp" alt="Journée type" class="section-img">
+                <p>Découvre l'organisation d'une journée type : du point d'équipe matinal à la sauvegarde de fin de journée, en passant par la programmation et le travail en duo avec ton tuteur expert.</p>
+            </div>
+            <div class="btn-container">
+                <a href="journee-type.html" class="btn-secondary">En Savoir Plus</a>
+            </div>
+        </section>
 
-    <section>
-        <h2>Votre stage</h2>
-        <article>
-            <p>ppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp
-            </p>
-            <img src="stage.png" alt="stage">
-        </article>
-        <button>En Savoir Plus</button>
-    </section>
-    <hr>
+        <hr>
+        <h2 class="subtitle">Nos métiers</h2>
+        <section class="home-section">
+            <div class="content">
+                <img src="../img/temoignages/Lucas.webp" alt="Experts Inetum" class="section-img">
+                <p>L'informatique est un travail d'équipe. Apprends-en plus sur les rôles de Développeur, Chef de Projet, UX Designer et Data Analyst pour trouver la voie qui te correspond.</p>
+            </div>
+            <div class="btn-container">
+                <a href="metiers.html" class="btn-secondary">En Savoir Plus</a>
+            </div>
+        </section>
+    </main>
 
-    <section>
-        <h2>Secteur1</h2>
-        <article>
-            <img src="stage.png" alt="secteur1">
-            <p>pppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp
-            </p>
-        </article>
-        <button>En Savoir Plus</button>
-    </section>
-    <hr>
-
-
-
-    <footer>
+        <footer>
         <div class="agences">
             <div class="colonne-pays">
                 <h3>Nos agences en France</h3>
@@ -169,14 +170,11 @@
         <div id="map">
             </div>
     </footer>
-    
 
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script src="https://unpkg.com/leaflet.markercluster@1.4.1/dist/leaflet.markercluster.js"></script>
 
     <script src="../js/theme.js"></script>
     <script src="../js/map.js"></script>
-
 </body>
-
 </html>
