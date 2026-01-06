@@ -7,6 +7,7 @@
 }
 
 .card {
+    border-radius: 8px;
     background-color: var(--color-bg-alt);
     border: 1px solid var(--color-text);
     padding: 12px 14px;
@@ -15,6 +16,9 @@
 }
 
 .card h3 {
+    display: flex;
+    gap: 8px;
+    align-items: center;
     font-size: 1.1em;
     font-weight: 700;
     margin:0 0 8px 0;

@@ -1,13 +1,15 @@
 .jobs-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));        /* Crée des colonnes d'au moins 300px de large, autant que possible */
-    gap: 30px;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    gap: 2vw;
     margin-bottom: 50px;
     margin-top: 50px;
     color: var(--color-text);
 }
 
 .job-card {
+    flex: 0 1 350px;
     background-color: var(--color-bg-alt);
     border-radius: 12px;
     padding: 25px;

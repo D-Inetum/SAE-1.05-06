@@ -1,9 +1,7 @@
-/* --- SECTION ET TITRE --- */
 .contact-section {
     color: var(--color-text);
 }
 
-/* --- MISE EN PAGE (CONTENEUR) --- */
 .contact-container {
     padding: 0 5%; 
     max-width: 1200px;
@@ -13,7 +11,6 @@
     gap: 2rem;
 }
 
-/* --- STYLE DES CARTES --- */
 .contact-card {
     background-color: var(--color-bg-alt); 
     border: 1px solid var(--color-text);  
@@ -22,12 +19,10 @@
     transition: transform 0.3s ease, box-shadow 0.4s ease-in-out, border-color 0.4s ease-in-out;
 }
 
-/* --- ÉLÉMENTS INTERNES --- */
 .icon-header {
     font-size: 2.2em;
     margin-bottom: 20px;
 }
-
 
 .icon-header i {
     color: var(--color-text);
@@ -46,14 +41,12 @@
     line-height: 1.4;
 }
 
-/* --- LIENS (TEL & MAIL) --- */
 .contact-card p a {
     color: var(--color-text);
     text-decoration: none;
     cursor: pointer;
 }
 
-/* --- BOUTON ACTION --- */
 .btn-contact {
     grid-column: 2/3;
     padding: 10px; 
@@ -77,7 +70,6 @@
     background-color: var(--color-accent);
 }
 
-/* --- LISTE RÉSEAUX SOCIAUX --- */
 .social-list {
     display: flex;
     flex-direction: column;
@@ -104,23 +96,18 @@
     font-size: 1.3em;
 }
 
-/* Couleurs spécifiques Réseaux */
 .fa-instagram { color: #E1306C; }
 .fa-x-twitter { color: var(--color-text); }
 .fa-youtube   { color: #FF0000; }
 .fa-linkedin  { color: #0077b5; }
 .fa-facebook  { color: #1877F2; }
 
-/* --- ANIMATIONS RESTANTES --- */
-
-/* Carte globale : On garde l'effet de soulèvement */
 .contact-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 0 30px var(--color-accent);
     border-color: var(--color-primary); 
 }
 
-/* Liens réseaux sociaux : On garde le petit glissement vers la droite */
 .social-list li a:hover {
     transform: translateX(10px); 
     color: var(--color-primary);
